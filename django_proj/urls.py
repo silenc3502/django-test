@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import include
+
+# Check with http://localhost:8000/blog
 
 urlpatterns = [
+    path('blog', include('blog.urls')),
     path('admin/', admin.site.urls),
 ]
